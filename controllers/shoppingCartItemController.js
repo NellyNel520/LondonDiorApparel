@@ -1,0 +1,1 @@
+const { ShoppingCartItem } = require('../models')
