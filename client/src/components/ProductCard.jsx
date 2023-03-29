@@ -1,3 +1,5 @@
+import Rating from './Rating';
+
 const ProductCard = (props) => {
 
 	return (
@@ -8,6 +10,7 @@ const ProductCard = (props) => {
 			</div>
 			<div className="info-wrapper flex-col">
 				<h4>{props.name}</h4>
+        <Rating rating={props.rating} numReviews={props.numReviews} />
 				<h5>${props.price}</h5>
 			</div>
 			
