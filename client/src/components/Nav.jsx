@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo1.png'
 
 const Nav = ({ user, handleLogOut }) => {
   let userOptions
@@ -15,8 +14,8 @@ const Nav = ({ user, handleLogOut }) => {
         </Link>
         <Link>Welcome {user.email}!</Link>
         <div className='logo'>
-          <h1>London Dior Apparel</h1>
-        </div>
+         <img alt='logo' src="https://i.postimg.cc/SKTchvDq/LDA-Logo-Blue3.png" />
+      </div>
       </nav>
     )
   }

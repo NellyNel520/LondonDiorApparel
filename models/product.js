@@ -18,7 +18,7 @@ const Product = new Schema(
       slug: { type: String, required: true, unique: true },
       image: { type: String, required: true },
       images: [String],
-      brand: { type: String, required: true },
+      sizes: [{ type: String, required: true }],
       categoryId: {type: Schema.Types.ObjectId, ref: 'ProductCategory'},
       description: { type: String, required: true },
       price: { type: Number, required: true },

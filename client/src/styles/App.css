@@ -30,7 +30,8 @@ nav a{
 }
 nav img{
   float: left;
-  width: 15%;
+  width: 16%;
+  margin-top: -1rem;
   /* color: rgb(219, 152, 9); */
   /* margin: 16px 0 0 0; */
 }
