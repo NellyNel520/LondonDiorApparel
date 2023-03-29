@@ -31,15 +31,6 @@ const Nav = ({ user, handleLogOut }) => {
   return (
     <header>
       {user ? userOptions : publicOptions}
-      <Link to="/">
-        <div className="logo-wrapper" alt="logo">
-          <img
-            className="logo"
-            src="https://avatars.dicebear.com/api/gridy/app.svg"
-            alt="welcome banner"
-          />
-        </div>
-      </Link>
       
     </header>
   )

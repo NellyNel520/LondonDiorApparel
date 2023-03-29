@@ -41,10 +41,10 @@ function App() {
       />
       <main>
         <Routes>
-          <Route path="/" element={<Home user={user} />} />
-          <Route path="/signin" element={<SignIn setUser={setUser} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/signIn" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
-          <Route></Route>
+          <Route path="/cart">Cart</Route>
         </Routes>
       </main>
     </div>
