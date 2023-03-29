@@ -1,11 +1,5 @@
-const db = require('../db')
-const ProductCategory = require('../models/productCategory')
-
-// Connect to the database
-db.on('error', console.error.bind(console, 'MongoDB connection error:'))
-
-const main = async () => {
-    const productCategories = [
+const productCategories = {
+  [
         {
           name: "short sleeve t-shirts",
           code: "SST",
@@ -35,16 +29,6 @@ const main = async () => {
           "code": "BT",
           "description":"unisex onesies and t-shirts",
           "products": [],
-        },
-        
-    ]
-
-    await ProductCategory.insertMany(productCategories)
-    console.log("Created some categories!")
-}
-const run = async () => {
-    await main()
-    db.close()
-}
-
-run()
+        }, 
+  ],
+};

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo1.png'
 
 const Nav = ({ user, handleLogOut }) => {
   let userOptions
@@ -13,6 +14,9 @@ const Nav = ({ user, handleLogOut }) => {
           Sign Out
         </Link>
         <Link>Welcome {user.email}!</Link>
+        <div className='logo'>
+          <h1>London Dior Apparel</h1>
+        </div>
       </nav>
     )
   }
@@ -25,6 +29,9 @@ const Nav = ({ user, handleLogOut }) => {
       <Link to="/signIn">Sign In</Link>
       <Link to="/products">Products</Link>
       <Link to="/">Home</Link>
+      <div className='logo'>
+         <img alt='logo' src="https://i.postimg.cc/SKTchvDq/LDA-Logo-Blue3.png" />
+      </div>
     </nav>
   )
 
