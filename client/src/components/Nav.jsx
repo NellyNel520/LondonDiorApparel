@@ -5,9 +5,9 @@ const Nav = ({ user, handleLogOut }) => {
   if (user) {
     userOptions = (
       <nav>
-        <Link to="/">Cart</Link>
-        <Link to="/">About Us</Link>
-        <Link to="/">Products</Link>
+        <Link to="/cart">Cart</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/products">Products</Link>
         <Link to="/">Home</Link>
         <Link onClick={handleLogOut} to="/">
           Sign Out
@@ -19,11 +19,11 @@ const Nav = ({ user, handleLogOut }) => {
 
   const publicOptions = (
     <nav>
-      <Link to="/">Cart</Link>
+      <Link to="/cart">Cart</Link>
       <Link to="/">About Us</Link>
       <Link to="/register">Register</Link>
-      <Link to="/signin">Sign In</Link>
-      <Link to="/">Products</Link>
+      <Link to="/signIn">Sign In</Link>
+      <Link to="/products">Products</Link>
       <Link to="/">Home</Link>
     </nav>
   )

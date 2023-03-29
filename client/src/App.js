@@ -4,6 +4,11 @@ import Nav from './components/Nav'
 import SignIn from './pages/SignIn'
 import Register from './pages/Register'
 import Home from './pages/Home'
+import Products from './pages/Products'
+import Cart from './pages/Cart'
+import About from './pages/About'
+
+
 import { CheckSession } from './services/Auth'
 import './styles/App.css';
 
@@ -42,6 +47,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/signIn" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/cart">Cart</Route>
