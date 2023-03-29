@@ -20,7 +20,7 @@ const Nav = ({ user, handleLogOut }) => {
   const publicOptions = (
     <nav>
       <Link to="/cart">Cart</Link>
-      <Link to="/">About Us</Link>
+      <Link to="/about">About Us</Link>
       <Link to="/register">Register</Link>
       <Link to="/signIn">Sign In</Link>
       <Link to="/products">Products</Link>
