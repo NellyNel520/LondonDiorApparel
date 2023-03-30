@@ -1,11 +1,22 @@
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { Store } from './Store'
 
 const Nav = ({ user, handleLogOut }) => {
+  const { state } = useContext(Store);
+  const { cart } = state;
+
   let userOptions
   if (user) {
     userOptions = (
       <nav>
-        <Link to="/cart">Cart</Link>
+        <Link to="/cart">Cart
+        {cart.cartItems.length > 0 && (
+                    <Badge pill bg="danger">
+                      {cart.cartItems.length}
+                    </Badge>
+                  )}
+        </Link>
         <Link to="/about">About Us</Link>
         <Link to="/products">Products</Link>
         <Link to="/">Home</Link>

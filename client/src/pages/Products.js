@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
+import { Store } from '../Store';
 import axios from 'axios';
 import { BASE_URL } from '../global'
 import ProductCard from '../components/ProductCard'
@@ -17,6 +18,14 @@ const Products = () => {
     getAllProducts()
   }, [])
 
+  const { product, dispatch: ctxDispatch } = useContext(Store);
+  const addToCartHandler = () => {
+    ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: { ...product, quantity: 1 },
+    });
+  };
+
   return (
     <div>
     <h3>Products</h3>
@@ -30,6 +39,7 @@ const Products = () => {
               image={product.image}
               name={product.name}
               price={product.price}
+              addToCartHandler={addToCartHandler}
             />
           </Link>
         ))}
