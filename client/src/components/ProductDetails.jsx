@@ -118,15 +118,25 @@ const ProductDetails = (props) => {
 										</span>
 									</div>
 								</div>
+								<div className='flex ml-6 items-center'>
+									<span class="mr-3">Status</span>
+									{product.countInStock > 0 ? (
+                        <span className=' text-white border-0 py-2 px-3 bg-green-500'>In Stock</span>
+                      ) : (
+                        <span className=' text-white border-0 py-2 px-6 bg-red-500'>Unavailable</span>
+                      )}
+								</div>
 							</div>
 
 							<div className="flex">
 								<span class="title-font font-medium text-2xl text-white-500">
 									${product.price}.00
 								</span>
-								<button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+								{product.countInStock > 0 && (
+                  <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
 									Add to Cart
 								</button>
+                )}
 								<button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
 									<svg
 										fill="currentColor"
