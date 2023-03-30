@@ -1,24 +1,17 @@
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
-import { Store } from '../Store'
-import Badge from 'react-bootstrap/Badge'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import PersonIcon from '@mui/icons-material/Person';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 const Nav = ({ user, handleLogOut }) => {
-	const { state } = useContext(Store)
-	const { cart } = state
+
 
 	let userOptions
 	if (user) {
 		userOptions = (
 			<nav>
-				<Link to="/cart">
-					Cart
-					{cart.cartItems.length > 0 && (
-						<Badge pill bg="danger">
-							{cart.cartItems.length}
-						</Badge>
-					)}
-				</Link>
+				<Link to="/cart"><ShoppingCartIcon /></Link>
 				<Link to="/about">About Us</Link>
 				<Link to="/products">Products</Link>
 				<Link to="/">Home</Link>
@@ -38,16 +31,10 @@ const Nav = ({ user, handleLogOut }) => {
 
 	const publicOptions = (
 		<nav>
-			<Link to="/cart">
-					Cart
-					{cart.cartItems.length > 0 && (
-						<Badge pill bg="danger">
-							{cart.cartItems.length}
-						</Badge>
-					)}
-				</Link>
+			<Link to="/cart"><ShoppingCartIcon /></Link>
+      <Link to="/register"><PersonIcon/></Link>
+      <Link><FavoriteBorderOutlinedIcon/></Link>
 			<Link to="/about">About Us</Link>
-			<Link to="/register">Register</Link>
 			<Link to="/signIn">Sign In</Link>
 			<Link to="/products">Products</Link>
 			<Link to="/">Home</Link>

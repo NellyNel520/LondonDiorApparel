@@ -46,7 +46,8 @@ const SignIn = ({ setUser }) => {
               required
             />
           </div>
-          <button disabled={!formValues.email || !formValues.password}>
+          <button disabled={!formValues.email || !formValues.password}
+          className='ml-3 rounded-md border border-transparent bg-blue-500 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'>
             Sign In
           </button>
         </form>
