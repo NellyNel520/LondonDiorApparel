@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../global'
 import ProductCard from '../components/ProductCard'
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const [products, setProducts] = useState([])
@@ -22,6 +23,7 @@ const Products = () => {
     {/* <h1>Current Listings</h1> */}
     <section className='container-grid'>
         {products.map((product) => (
+          <Link to={`/products/${product._id}`}>
             <ProductCard
               key={product.id}
               {...product}
@@ -29,6 +31,7 @@ const Products = () => {
               name={product.name}
               price={product.price}
             />
+          </Link>
         ))}
       </section>
 
