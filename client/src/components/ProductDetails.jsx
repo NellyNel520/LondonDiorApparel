@@ -33,14 +33,14 @@ const ProductDetails = (props) => {
 							src={product.image}
 						/>
 						<div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-							<h2 className="text-sm title-font text-gray-500 tracking-widest">
+							{/* <h2 className="text-sm title-font text-gray-500 tracking-widest">
 								BRAND
-							</h2>
-							<h1 className="text-[#45a2ef] text-5xl title-font mb-8">
+							</h2> */}
+							<h1 className="text-[#45a2ef] text-left text-5xl title-font mb-8">
 								{product.name}
 							</h1>
 							<div className="flex mb-4">
-								<span className="flex ml-[4rem] items-center pr-4 ">
+								<span className="flex ml-[rem] items-center pr-4 ">
 									<Rating
 										rating={product.rating}
 										numReviews={product.numReviews}
@@ -85,7 +85,7 @@ const ProductDetails = (props) => {
 									</a>
 								</span>
 							</div>
-							<p>{product.description}</p>
+							<p className='text-left'>{product.description}</p>
 
 							<div className="flex mt-6 items-center pb-5 border-b-2 border-gray-600 mb-5">
 								<div className="flex">
@@ -121,19 +121,19 @@ const ProductDetails = (props) => {
 								<div className='flex ml-6 items-center'>
 									<span class="mr-3">Status</span>
 									{product.countInStock > 0 ? (
-                        <span className=' text-white border-0 py-2 px-3 bg-green-500'>In Stock</span>
+                        <span className=' text-white border-0 py-2 px-3 bg-green-500 rounded'>In Stock</span>
                       ) : (
-                        <span className=' text-white border-0 py-2 px-6 bg-red-500'>Unavailable</span>
+                        <span className=' text-white border-0 py-2 px-6 bg-red-500 rounded'>Unavailable</span>
                       )}
 								</div>
 							</div>
 
 							<div className="flex">
-								<span class="title-font font-medium text-2xl text-white-500">
+								<span class="title-font font-medium text-3xl text-white-500">
 									${product.price}.00
 								</span>
 								{product.countInStock > 0 && (
-                  <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                  <button class="flex ml-auto text-white bg-blue-400 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-400 rounded">
 									Add to Cart
 								</button>
                 )}
