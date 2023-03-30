@@ -1,5 +1,6 @@
 import Rating from './Rating';
 
+
 const ProductCard = (props) => {
 
 	return (
@@ -12,6 +13,7 @@ const ProductCard = (props) => {
 				<h4>{props.name}</h4>
         <Rating rating={props.rating} numReviews={props.numReviews} />
 				<h5>${props.price}</h5>
+        <button className='justify-center rounded-md bg-[#e57626] py-2 px-3 text-sm font-semibold text-white'>Add to cart</button>
 			</div>
 			
 		</div>
