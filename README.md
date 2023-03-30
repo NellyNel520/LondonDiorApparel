@@ -17,6 +17,9 @@ This application was assigned as my capstone project to demonstrate my overall k
 * React
     *React Authentication
 * Node
+* React Context ( provides a way to pass data through the component tree without having to pass props down manually at every level.)
+* Font Awesome icons
+* Tailwind CSS
 * Stripe API (payment method)
 * Paypal API (payment method)
 
