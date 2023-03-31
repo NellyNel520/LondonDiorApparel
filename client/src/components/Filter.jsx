@@ -3,9 +3,11 @@ import React from 'react'
 const Filter = (props) => {
 	return (
 		<div>
-			<div>{props.countInStock}</div>
+      {/* this works yay! */}
+			<div>{props.count}</div>
+      
 			<div className="filter-sort">
-				Order{" "}
+				Sort{" "}
 				<select value={props.sort} onChange={props.sortProducts}>
           <option>Latest</option>
           <option value="lowest">Lowest</option>
@@ -16,12 +18,12 @@ const Filter = (props) => {
         Filter{" "}
         <select value={props.sizes} onChange={props.filterProducts}>
           <option value={""}>ALL</option>
-          <option value={"XS"}></option>
-          <option value={"S"}></option>
-          <option value={"M"}></option>
-          <option value={"L"}></option>
-          <option value={"XL"}></option>
-          <option value={"XXL"}></option>
+          <option value={"XS"}>XS</option>
+          <option value={"S"}>S</option>
+          <option value={"M"}>M</option>
+          <option value={"L"}>L</option>
+          <option value={"XL"}>XL</option>
+          <option value={"XXL"}>XXL</option>
         </select>
       </div>
 		</div>
