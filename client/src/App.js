@@ -8,12 +8,21 @@ import Products from './pages/Products'
 import Cart from './pages/Cart'
 import About from './pages/About'
 import ProductDetails from './components/ProductDetails'
+import axios from 'axios'
+import { BASE_URL } from './global'
 
 import { CheckSession } from './services/Auth'
 import './styles/App.css'
 
 function App() {
 	const [user, setUser] = useState(null)
+	const [products, setProducts] = useState([])
+
+	const getAllProducts = async () => {
+		const response = await axios.get(`${BASE_URL}product/products`)
+		setProducts(response.data.products)
+		// console.log(response.data)
+	}
 
 	const handleLogOut = () => {
 		//Reset all auth related state and clear localStorage
@@ -40,7 +49,8 @@ function App() {
 			<main>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/products" element={<Products />} />
+					<Route path="/products" element={<Products getAllProducts={getAllProducts} products={products} setProducts={setProducts}
+					/>} />
 					<Route path="/products/:id" element={<ProductDetails />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/cart" element={<Cart />} />

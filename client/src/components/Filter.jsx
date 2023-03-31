@@ -2,12 +2,12 @@ import React from 'react'
 
 const Filter = (props) => {
 	return (
-		<div>
+		<div className='flex justify-between mt-6 m-5'>
       {/* this works yay! */}
-			<div>{props.count}</div>
-      
+			<div>Products: {props.count}</div>
+
 			<div className="filter-sort">
-				Sort{" "}
+				Order By:{" "}
 				<select value={props.sort} onChange={props.sortProducts}>
           <option>Latest</option>
           <option value="lowest">Lowest</option>
@@ -16,7 +16,7 @@ const Filter = (props) => {
 			</div>
       <div className='filter-size'>
         Filter{" "}
-        <select value={props.sizes} onChange={props.filterProducts}>
+        <select value={props.size} onChange={props.filterProducts}>
           <option value={""}>ALL</option>
           <option value={"XS"}>XS</option>
           <option value={"S"}>S</option>
