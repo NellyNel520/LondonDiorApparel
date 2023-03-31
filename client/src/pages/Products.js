@@ -6,8 +6,11 @@ import { BASE_URL } from '../global'
 import ProductCard from '../components/ProductCard'
 import { Link } from 'react-router-dom';
 
+
+
 const Products = () => {
   const [products, setProducts] = useState([])
+  
   
   useEffect(() => {
     const getAllProducts = async () => {
